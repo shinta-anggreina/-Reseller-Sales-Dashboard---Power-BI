@@ -1,0 +1,31 @@
+===========================================================
+PLAYBOOK DAX — Reseller Sales (AdventureWorksDW2022)
+Cara pakai cepat:
+
+1) Di Power BI: pastikan relationships:
+   Fact Reseller Sales [OrderDateKey] → Date[DateKey] (aktif)
+   ShipDateKey/DueDateKey → Date[DateKey] (inactive)
+2) Buat tabel kosong `_Measures` (Home > Enter data).
+3) Buat semua measure di bawah ini dengan memilih tabel `_Measures`,
+   lalu Modeling > New measure, paste 1 per 1.
+4) Sesuaikan kembali nama table dan column yang digunakan.
+
+===========================================================
+
+
+A. Base Measures
+
+Total Sales     = SUM('Fact Reseller Sales'[SalesAmount])
+Total Quantity  = SUM('Fact Reseller Sales'[OrderQuantity])
+Total Orders    = DISTINCTCOUNT('Fact Reseller Sales'[SalesOrderNumber])
+Total Cost      = SUM('Fact Reseller Sales'[TotalProductCost])
+Discount Amount = SUM('Fact Reseller Sales'[DiscountAmount])
+Extended Amount = SUM('Fact Reseller Sales'[ExtendedAmount])
+
+
+B. Derived Measures
+
+Average Order Value = DIVIDE([Total Sales], [Total Orders])
+Gross Profit        = [Total Sales] - [Total Cost]
+Gross Margin %      = DIVIDE([Gross Profit], [Total Sales])
+Discount %          = DIVIDE([Discount Amount], [Extended Amount])
