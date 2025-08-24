@@ -23,7 +23,7 @@ Only transactions in USD are considered for consistency.
 
 ## ⚙️ Tools and Technologies
 - 📈 **Power BI**: For data visualization and dashboard creation  
-- 📑 **Excel / CSV**: For dataset preprocessing  
+- 📑 **SQL Server Management Studio**: For dataset preprocessing  
 
 ## 💡 Insights
 The following insights were derived from the dashboard:  
