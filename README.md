@@ -6,7 +6,7 @@ The dataset used in this project is sourced from the AdventureworksDW22 database
 The goal is to generate meaningful insights regarding reseller performance and present them in an interactive and visually appealing dashboard.  
 
 ## 📂 Data Source
-[Unduh Dataset Disini](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
+[Sourced Link](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
 The following information is included for analysis:
 - 📅 Sales transactions by date
 - 🏬 Reseller details
